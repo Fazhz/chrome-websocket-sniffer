@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebSocket Sniffer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>WebSocket Sniffer</h1>
+      <button id="clear">Clear</button>
+    </header>
+    <section id="summary">
+      <span id="count">0</span> events captured
+    </section>
+    <section id="log-list" role="list"></section>
+    <template id="log-entry">
+      <article class="log-entry" role="listitem">
+        <header>
+          <span class="event"></span>
+          <time class="timestamp"></time>
+        </header>
+        <div class="meta">
+          <span class="url"></span>
+          <span class="socket"></span>
+        </div>
+        <pre class="payload"></pre>
+      </article>
+    </template>
+    <script src="popup.js"></script>
+  </body>
+</html>
